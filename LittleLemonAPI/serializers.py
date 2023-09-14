@@ -10,3 +10,13 @@ class ManagerSerializer(serializers.ModelSerializer):
   class Meta:
     model = models.User
     fields = ['username', 'first_name', 'password']
+
+class DeliveryCrewSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = models.User
+    fields = ['username', 'first_name', 'password']
+
+class CartSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = models.Cart
+    fields = ['quantity', 'unit_price', 'price', 'menuitem_id', 'user_id']
