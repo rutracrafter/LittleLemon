@@ -11,6 +11,8 @@ urlpatterns = [
   path('groups/delivery-crew/users/', views.DeliveryCrewView.as_view()),
   path('groups/delivery-crew/users/<int:pk>', views.SingleDeliveryCrewView),
   path('cart/menu-items/', views.CartView),
+  path('orders/', views.OrderView),
+  path('orders/<int:pk>', views.SingleOrderView),
   path('', include('djoser.urls')),
   path('', include('djoser.urls.authtoken')),
 ]
